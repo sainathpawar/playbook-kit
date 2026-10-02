@@ -1,0 +1,62 @@
+{
+  "name": "playbook-kit",
+  "version": "0.1.0",
+  "description": "Write a team playbook once, run it in every AI assistant: Claude Code, Codex, GitHub Copilot, Cursor, Gemini CLI, ChatGPT and Microsoft 365 Copilot. No server, no API key.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "playbook": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "playbooks",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm test",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "agent-skills",
+    "playbooks",
+    "prompts",
+    "claude-code",
+    "codex",
+    "copilot",
+    "chatgpt",
+    "cursor",
+    "gemini",
+    "ai-enablement"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "sainath",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sainathpawar/playbook-kit.git"
+  },
+  "homepage": "https://github.com/sainathpawar/playbook-kit#readme",
+  "bugs": {
+    "url": "https://github.com/sainathpawar/playbook-kit/issues"
+  }
+}
